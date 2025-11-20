@@ -1,6 +1,7 @@
 import os
 import re
 import datetime as dt
+from pathlib import Path  # ← Import correto
 
 import pandas as pd
 from loguru import logger
@@ -19,7 +20,7 @@ if IS_STREAMLIT_CLOUD:
 
     # 2) Garante que a pasta credentials existe
     os.makedirs("credentials", exist_ok=True)
-    creds_path = pathlib.Path("credentials/indicadores-inventario-bv.json")
+    creds_path = Path("credentials/indicadores-inventario-bv.json")  # ← Use Path
     creds_path.write_text(creds_json, encoding="utf-8")
 
     # 3) Ajusta a variável de ambiente para o caminho do arquivo
@@ -39,7 +40,7 @@ else:
     # Ambiente local: carrega .env normalmente
     load_dotenv()
 
-# Carrega .env
+# Carrega .env (com override para garantir atualização)
 load_dotenv(override=True)
 
 PASTA_ID = os.getenv("DRIVE_FOLDER_INPUT")
@@ -191,78 +192,8 @@ def transform(df: pd.DataFrame, dt_inv, loja: str) -> pd.DataFrame:
 
 
 # ---------------------------------------------------------------------
-# MAIN
+# PIPELINE
 # ---------------------------------------------------------------------
-def main():
-    if not PASTA_ID:
-        raise RuntimeError("DRIVE_FOLDER_INPUT não definido no .env")
-
-    logger.info("Início da ingestão")
-
-    frames = []
-    files = list_gsheets_in_folder(PASTA_ID)
-    logger.info(f"Arquivos encontrados na pasta de entrada: {len(files)}")
-
-    for file in files:
-        nome = file["name"]
-        file_id = file["id"]
-
-        try:
-            dt_inv, loja = parse_date_store(nome)
-            df_raw = read_gsheet_to_df(file_id)
-            df_tr = transform(df_raw, dt_inv, loja)
-            frames.append(df_tr)
-            logger.info(f"Arquivo processado: {nome} ({file_id})")
-        except Exception as e:
-            logger.error(f"Falha ao processar arquivo {nome} ({file_id}): {e}")
-
-    if not frames:
-        logger.warning("Nenhum arquivo válido foi processado. Encerrando.")
-        return
-
-    df = pd.concat(frames, ignore_index=True)
-
-    # Histórico local
-    hist = pd.DataFrame()
-    if HIST_SOURCE and os.path.exists(HIST_SOURCE):
-        logger.info(f"Lendo histórico local de {HIST_SOURCE}")
-        hist = pd.read_csv(
-            HIST_SOURCE,
-            parse_dates=["dt_inventario", "ingestion_ts"],
-        )
-
-    df_all = pd.concat([hist, df], ignore_index=True)
-
-    # Deduplicação pela chave
-    subset = ["dt_inventario", "loja", "item_id"]
-    if "id" in df_all.columns:
-        subset.insert(1, "id")  # dt_inventario, id, loja, item_id
-
-    df_all = (
-        df_all.sort_values("ingestion_ts")
-              .drop_duplicates(subset=subset, keep="last")
-    )
-
-    # Janela móvel de 12 meses
-    df_all["dt_inventario"] = pd.to_datetime(df_all["dt_inventario"]).dt.tz_localize(None)
-
-    cutoff = pd.Timestamp.now().normalize() - pd.DateOffset(months=12)
-    df_all = df_all[df_all["dt_inventario"] >= cutoff]
-
-    # Métricas de qualidade
-    df_all["dif_abs"] = df_all["qtd_dif"].abs()
-    df_all["acuracia"] = 1 - (
-        df_all["dif_abs"] / df_all["qtd_wms"].replace({0: pd.NA})
-    )
-    df_all["acuracia"] = df_all["acuracia"].clip(lower=0, upper=1)
-
-    # Escrita no destino
-    write_output(df_all, DESTINO or "sheets")
-
-    logger.info(f"Linhas finais na base consolidada: {len(df_all)}")
-    logger.info("Processo concluído com sucesso.")
-
-
 def run_pipeline():
     """Roda o pipeline de inventário e devolve um resumo para o Streamlit."""
     print(f"[DEBUG] PASTA_ID: {PASTA_ID}")
@@ -304,14 +235,21 @@ def run_pipeline():
     # Junta tudo que veio dos arquivos da pasta
     df = pd.concat(frames, ignore_index=True)
 
-    # Histórico local, se existir
+    # Histórico local — só se existir e for válido
     hist = pd.DataFrame()
-    if HIST_SOURCE and os.path.exists(HIST_SOURCE):
-        logger.info(f"Lendo histórico local de {HIST_SOURCE}")
-        hist = pd.read_csv(
-            HIST_SOURCE,
-            parse_dates=["dt_inventario", "ingestion_ts"],
-        )
+    if HIST_SOURCE:
+        hist_path = Path(HIST_SOURCE)
+        if hist_path.exists():
+            try:
+                hist = pd.read_csv(
+                    hist_path,
+                    parse_dates=["dt_inventario", "ingestion_ts"],
+                )
+                logger.info(f"Lido histórico local: {len(hist)} linhas")
+            except Exception as e:
+                logger.warning(f"Falha ao ler histórico local: {e}. Ignorando.")
+        else:
+            logger.info("Arquivo histórico não encontrado. Iniciando com base vazia.")
 
     df_all = pd.concat([hist, df], ignore_index=True)
 
