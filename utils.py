@@ -20,21 +20,29 @@ SCOPES = [
 ]
 
 def _build_credentials():
-    """Retorna um objeto Credentials para Drive + Sheets."""
-    # Ambiente Streamlit Cloud
-    if os.getenv("STREAMLIT_RUNTIME"):
+    """Retorna um objeto Credentials para Drive + Sheets.
+
+    Regra:
+    1) Se estiver em ambiente Streamlit Cloud (ou qualquer ambiente com st.secrets["GOOGLE_CREDENTIALS"]),
+       usa as credenciais vindas dos Secrets.
+    2) Caso contrário, usa GOOGLE_APPLICATION_CREDENTIALS do .env (modo local).
+    """
+    # 1) Tentar primeiro via st.secrets (Streamlit Cloud)
+    try:
         import streamlit as st
 
-        # JSON bruto vindo dos secrets (GOOGLE_CREDENTIALS)
-        creds_json = st.secrets["GOOGLE_CREDENTIALS"]
-        info = json.loads(creds_json)
+        if "GOOGLE_CREDENTIALS" in st.secrets:
+            creds_json = st.secrets["GOOGLE_CREDENTIALS"]
+            info = json.loads(creds_json)
 
-        creds = service_account.Credentials.from_service_account_info(
-            info, scopes=SCOPES
-        )
-        return creds
+            return service_account.Credentials.from_service_account_info(
+                info, scopes=SCOPES
+            )
+    except Exception:
+        # Se não conseguir importar streamlit ou não tiver secrets, ignora e cai no modo local
+        pass
 
-    # Ambiente local: usa GOOGLE_APPLICATION_CREDENTIALS (arquivo JSON)
+    # 2) Modo local: ler do arquivo apontado por GOOGLE_APPLICATION_CREDENTIALS
     from dotenv import load_dotenv
 
     load_dotenv()
@@ -42,17 +50,19 @@ def _build_credentials():
 
     if not sa_path:
         raise RuntimeError(
-            "GOOGLE_APPLICATION_CREDENTIALS não definido. "
-            "Configure no .env ou nos secrets do Streamlit."
+            "Não foi possível encontrar credenciais.\n"
+            "- Se estiver rodando LOCALMENTE: defina GOOGLE_APPLICATION_CREDENTIALS no .env\n"
+            "- Se estiver no Streamlit Cloud: configure GOOGLE_CREDENTIALS em Secrets."
         )
 
     sa_path = Path(sa_path)
     if not sa_path.exists():
         raise FileNotFoundError(f"Arquivo de credenciais não encontrado: {sa_path}")
 
-    creds = service_account.Credentials.from_service_account_file(
+    return service_account.Credentials.from_service_account_file(
         str(sa_path), scopes=SCOPES
     )
+
     return creds
 
 
