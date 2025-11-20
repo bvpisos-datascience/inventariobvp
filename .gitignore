@@ -1,0 +1,23 @@
+# Ambiente e credenciais
+.env
+credentials/
+*.json
+indicadores-inventario-bv.json
+
+# Logs e outputs
+_logs/
+_outputs/
+lixo/
+__pycache__/
+*.log
+*.csv
+
+# Sistema
+.DS_Store
+*.pyc
+.idea/
+.vscode/
+
+# ipybnotebook
+.ipynb_checkpoints/
+.ipynb
