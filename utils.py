@@ -18,42 +18,29 @@ SCOPES = [
 
 
 # ========================================
-# 1) MONTAGEM DE CREDENCIAIS (SEGURO E À PROVA DE ERROS)
+# 1) MONTAGEM DE CREDENCIAIS (APENAS DO .env — FUNCIONA LOCALMENTE)
 # ========================================
 
 def _build_credentials():
     """
-    Carrega credenciais tanto localmente (GOOGLE_CREDENTIALS no .env)
-    quanto no Streamlit Cloud (st.secrets["GOOGLE_CREDENTIALS"]).
-    Retorna um objeto de credencial válido.
+    Carrega credenciais do arquivo .env.
+    Não tenta acessar st.secrets (evita erro local).
     """
-
-    # Tenta obter de st.secrets primeiro (se disponível)
-    try:
-        import streamlit as st
-        if "GOOGLE_CREDENTIALS" in st.secrets:
-            raw = st.secrets["GOOGLE_CREDENTIALS"]
-        else:
-            raw = os.getenv("GOOGLE_CREDENTIALS")
-    except (ImportError, RuntimeError):
-        # Não está no Streamlit — usa .env
-        raw = os.getenv("GOOGLE_CREDENTIALS")
+    raw = os.getenv("GOOGLE_CREDENTIALS")
 
     if not raw:
         raise RuntimeError(
             "❌ GOOGLE_CREDENTIALS não encontrada. "
-            "No Streamlit Cloud, configure em Secrets. "
-            "Localmente, configure no .env."
+            "Configure no arquivo .env na raiz do projeto."
         )
 
-    # Remove possíveis aspas triplas extras (caso alguém cole errado)
+    # Remove possíveis aspas extras (caso copie errado)
     raw = raw.strip()
     if raw.startswith('"""') and raw.endswith('"""'):
         raw = raw[3:-3]
     elif raw.startswith('"') and raw.endswith('"'):
         raw = raw[1:-1]
 
-    # Tenta carregar como JSON
     try:
         info = json.loads(raw)
     except Exception as e:
@@ -133,7 +120,7 @@ def write_output(df: pd.DataFrame, destino: str = "sheets"):
     sheet_id = os.getenv("SHEET_OUTPUT_ID")
     if not sheet_id:
         raise RuntimeError(
-            "❌ SHEET_OUTPUT_ID não definido. Configure no .env ou no Secrets."
+            "❌ SHEET_OUTPUT_ID não definido. Configure no .env."
         )
 
     # Transformação do dataframe
