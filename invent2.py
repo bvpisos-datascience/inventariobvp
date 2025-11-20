@@ -1,4 +1,3 @@
-# invent2.py
 import os
 import re
 import datetime as dt
@@ -8,6 +7,37 @@ from loguru import logger
 from dotenv import load_dotenv
 
 from utils import list_gsheets_in_folder, read_gsheet_to_df, write_output
+
+# Detecta se está no ambiente do Streamlit Cloud
+IS_STREAMLIT_CLOUD = os.getenv("STREAMLIT_RUNTIME") is not None
+
+if IS_STREAMLIT_CLOUD:
+    import streamlit as st
+
+    # 1) Recupera o JSON das credenciais a partir dos secrets
+    creds_json = st.secrets["GOOGLE_CREDENTIALS"]
+
+    # 2) Garante que a pasta credentials existe
+    os.makedirs("credentials", exist_ok=True)
+    creds_path = pathlib.Path("credentials/indicadores-inventario-bv.json")
+    creds_path.write_text(creds_json, encoding="utf-8")
+
+    # 3) Ajusta a variável de ambiente para o caminho do arquivo
+    os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = str(creds_path)
+
+    # 4) Copia as outras variáveis dos secrets para o ambiente
+    for key in [
+        "DRIVE_FOLDER_INPUT",
+        "DRIVE_FOLDER_OUTPUT",
+        "SHEET_OUTPUT_ID",
+        "HIST_SOURCE",
+        "DESTINO",
+    ]:
+        if key in st.secrets:
+            os.environ[key] = st.secrets[key]
+else:
+    # Ambiente local: carrega .env normalmente
+    load_dotenv()
 
 # Carrega .env
 load_dotenv(override=True)
