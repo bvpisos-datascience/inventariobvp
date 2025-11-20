@@ -98,8 +98,14 @@ def read_gsheet_to_df(file_id: str) -> pd.DataFrame:
     drive_service, _ = get_services()
     data = drive_service.files().get_media(fileId=file_id).execute()
     bio = io.BytesIO(data)
-    df = pd.read_excel(bio, header=1)  # ← Usa a segunda linha como cabeçalho
-    print(f"[DEBUG] Colunas lidas do arquivo: {list(df.columns)}")
+    
+    # Força leitura da linha 2 como cabeçalho, ignora linhas vazias
+    df = pd.read_excel(bio, header=1, skiprows=0, dtype=str)
+    
+    # Remove linhas completamente vazias
+    df = df.dropna(how='all')
+    
+    print(f"[DEBUG] Colunas lidas: {list(df.columns)}")
     return df
 
 

@@ -265,6 +265,9 @@ def main():
 
 def run_pipeline():
     """Roda o pipeline de inventário e devolve um resumo para o Streamlit."""
+    print(f"[DEBUG] PASTA_ID: {PASTA_ID}")
+    print(f"[DEBUG] DESTINO: {DESTINO}")
+    print(f"[DEBUG] HIST_SOURCE: {HIST_SOURCE}")
     if not PASTA_ID:
         raise RuntimeError("DRIVE_FOLDER_INPUT não definido no .env")
 
