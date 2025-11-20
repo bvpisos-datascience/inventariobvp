@@ -3,84 +3,93 @@ import os
 import io
 import json
 from pathlib import Path
-
 import pandas as pd
+
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 
-# -------------------------------------------------------
-# 1) Montagem das credenciais de forma segura
-#    - Local: lê do .env / arquivo JSON
-#    - Streamlit Cloud: usa st.secrets["GOOGLE_CREDENTIALS"]
-# -------------------------------------------------------
-
+# ----------------------------------------
+# Escopos usados pelas APIs
+# ----------------------------------------
 SCOPES = [
     "https://www.googleapis.com/auth/drive.readonly",
     "https://www.googleapis.com/auth/spreadsheets",
 ]
 
-def _build_credentials():
-    """Retorna um objeto Credentials para Drive + Sheets.
 
-    Regra:
-    1) Se estiver em ambiente Streamlit Cloud (ou qualquer ambiente com st.secrets["GOOGLE_CREDENTIALS"]),
-       usa as credenciais vindas dos Secrets.
-    2) Caso contrário, usa GOOGLE_APPLICATION_CREDENTIALS do .env (modo local).
+# ========================================
+# 1) MONTAGEM DE CREDENCIAIS (SEGURO E À PROVA DE ERROS)
+# ========================================
+
+def _build_credentials():
     """
-    # 1) Tentar primeiro via st.secrets (Streamlit Cloud)
+    Carrega credenciais tanto localmente (GOOGLE_CREDENTIALS no .env)
+    quanto no Streamlit Cloud (st.secrets["GOOGLE_CREDENTIALS"]).
+    Retorna um objeto de credencial válido.
+    """
+
+    # Tenta obter de st.secrets primeiro (se disponível)
     try:
         import streamlit as st
-
         if "GOOGLE_CREDENTIALS" in st.secrets:
-            creds_json = st.secrets["GOOGLE_CREDENTIALS"]
-            info = json.loads(creds_json)
+            raw = st.secrets["GOOGLE_CREDENTIALS"]
+        else:
+            raw = os.getenv("GOOGLE_CREDENTIALS")
+    except (ImportError, RuntimeError):
+        # Não está no Streamlit — usa .env
+        raw = os.getenv("GOOGLE_CREDENTIALS")
 
-            return service_account.Credentials.from_service_account_info(
-                info, scopes=SCOPES
-            )
-    except Exception:
-        # Se não conseguir importar streamlit ou não tiver secrets, ignora e cai no modo local
-        pass
-
-    # 2) Modo local: ler do arquivo apontado por GOOGLE_APPLICATION_CREDENTIALS
-    from dotenv import load_dotenv
-
-    load_dotenv()
-    sa_path = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
-
-    if not sa_path:
+    if not raw:
         raise RuntimeError(
-            "Não foi possível encontrar credenciais.\n"
-            "- Se estiver rodando LOCALMENTE: defina GOOGLE_APPLICATION_CREDENTIALS no .env\n"
-            "- Se estiver no Streamlit Cloud: configure GOOGLE_CREDENTIALS em Secrets."
+            "❌ GOOGLE_CREDENTIALS não encontrada. "
+            "No Streamlit Cloud, configure em Secrets. "
+            "Localmente, configure no .env."
         )
 
-    sa_path = Path(sa_path)
-    if not sa_path.exists():
-        raise FileNotFoundError(f"Arquivo de credenciais não encontrado: {sa_path}")
+    # Remove possíveis aspas triplas extras (caso alguém cole errado)
+    raw = raw.strip()
+    if raw.startswith('"""') and raw.endswith('"""'):
+        raw = raw[3:-3]
+    elif raw.startswith('"') and raw.endswith('"'):
+        raw = raw[1:-1]
 
-    return service_account.Credentials.from_service_account_file(
-        str(sa_path), scopes=SCOPES
-    )
+    # Tenta carregar como JSON
+    try:
+        info = json.loads(raw)
+    except Exception as e:
+        raise RuntimeError(f"❌ Erro ao interpretar GOOGLE_CREDENTIALS como JSON: {e}")
 
-    return creds
+    try:
+        creds = service_account.Credentials.from_service_account_info(
+            info, scopes=SCOPES
+        )
+        return creds
+    except Exception as e:
+        raise RuntimeError(f"❌ Erro ao criar objeto de credencial: {e}")
 
 
-# Cria cliente de Drive e Sheets reutilizáveis
-creds = _build_credentials()
-drive_service = build("drive", "v3", credentials=creds)
-sheets_service = build("sheets", "v4", credentials=creds)
+# Função para obter serviços sob demanda
+def get_services():
+    """
+    Retorna os serviços do Google Drive e Sheets.
+    As credenciais são criadas somente quando necessário.
+    """
+    creds = _build_credentials()
+    drive_service = build("drive", "v3", credentials=creds)
+    sheets_service = build("sheets", "v4", credentials=creds)
+    return drive_service, sheets_service
 
 
-# -------------------------------------------------------
+# ========================================
 # 2) Funções utilitárias
-# -------------------------------------------------------
+# ========================================
 
 def list_gsheets_in_folder(folder_id: str):
     """
     Lista arquivos XLSX em uma pasta do Drive.
     Retorna lista de dicts: [{id: ..., name: ...}, ...]
     """
+    drive_service, _ = get_services()
     query = (
         f"'{folder_id}' in parents "
         "and mimeType='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' "
@@ -97,9 +106,9 @@ def list_gsheets_in_folder(folder_id: str):
 
 def read_gsheet_to_df(file_id: str) -> pd.DataFrame:
     """
-    Faz download do XLSX do Drive e lê como DataFrame.
-    (Apesar do nome, os arquivos são XLSX, não Google Sheets nativos.)
+    Baixa o XLSX do Drive e retorna DataFrame.
     """
+    drive_service, _ = get_services()
     data = drive_service.files().get_media(fileId=file_id).execute()
     bio = io.BytesIO(data)
     df = pd.read_excel(bio)
@@ -108,39 +117,40 @@ def read_gsheet_to_df(file_id: str) -> pd.DataFrame:
 
 def write_output(df: pd.DataFrame, destino: str = "sheets"):
     """
-    Grava o DataFrame:
-    - sempre salva CSV local em _outputs/base_inventario_12meses.csv
-    - se destino == 'sheets', escreve na planilha definida em SHEET_OUTPUT_ID
+    Salva CSV local e, se solicitado, atualiza a planilha do Google Sheets.
     """
 
-    # 1) Salvar histórico local (quando estiver rodando localmente)
+    # 1) Salvar histórico local
     hist_path = os.getenv("HIST_SOURCE", "_outputs/base_inventario_12meses.csv")
     Path(hist_path).parent.mkdir(parents=True, exist_ok=True)
     df.to_csv(hist_path, index=False, encoding="utf-8-sig")
 
+    # Se não for pra escrever no Sheets, finalize aqui
     if destino != "sheets":
         return
 
+    # 2) Obter ID da planilha
     sheet_id = os.getenv("SHEET_OUTPUT_ID")
     if not sheet_id:
         raise RuntimeError(
-            "SHEET_OUTPUT_ID não definido. Configure no .env ou nos secrets."
+            "❌ SHEET_OUTPUT_ID não definido. Configure no .env ou no Secrets."
         )
 
-    # Converte DataFrame para matriz de valores
-    df_out = df.copy()
-    df_out = df_out.astype(object).where(pd.notna(df_out), "")
+    # Transformação do dataframe
+    df_out = df.copy().astype(object).where(pd.notna(df), "")
 
     values = [list(df_out.columns)] + df_out.values.tolist()
 
-    # Limpa a planilha (aba padrão)
+    # 3) Obter serviço do Sheets
+    _, sheets_service = get_services()
+
+    # 4) Limpar planilha
     sheets_service.spreadsheets().values().clear(
         spreadsheetId=sheet_id, range="A:ZZ"
     ).execute()
 
-    # Escreve novos dados
+    # 5) Escrever dados
     body = {"values": values}
-
     sheets_service.spreadsheets().values().update(
         spreadsheetId=sheet_id,
         range="A1",
