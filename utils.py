@@ -98,7 +98,8 @@ def read_gsheet_to_df(file_id: str) -> pd.DataFrame:
     drive_service, _ = get_services()
     data = drive_service.files().get_media(fileId=file_id).execute()
     bio = io.BytesIO(data)
-    df = pd.read_excel(bio)
+    df = pd.read_excel(bio, header=1)  # ← Usa a segunda linha como cabeçalho
+    print(f"[DEBUG] Colunas lidas do arquivo: {list(df.columns)}")
     return df
 
 
@@ -120,23 +121,32 @@ def write_output(df: pd.DataFrame, destino: str = "sheets"):
     sheet_id = os.getenv("SHEET_OUTPUT_ID")
     if not sheet_id:
         raise RuntimeError(
-            "❌ SHEET_OUTPUT_ID não definido. Configure no .env."
+            "❌ SHEET_OUTPUT_ID não definido. Configure no .env ou no Secrets."
         )
 
-    # Transformação do dataframe
-    df_out = df.copy().astype(object).where(pd.notna(df), "")
+    # 3) Fazer uma cópia para não alterar o original
+    df_out = df.copy()
 
-    values = [list(df_out.columns)] + df_out.values.tolist()
+    # 4) Converter colunas de data/hora para string (JSON serializable)
+    for col in df_out.columns:
+        if pd.api.types.is_datetime64_any_dtype(df_out[col]):
+            df_out[col] = df_out[col].dt.strftime("%Y-%m-%d %H:%M:%S")
 
-    # 3) Obter serviço do Sheets
+    # 5) Substituir NaN/NaT por strings vazias
+    df_out = df_out.astype(object).where(pd.notna(df_out), "")
+
+    # 6) Preparar valores para o Google Sheets
+    values = [df_out.columns.tolist()] + df_out.values.tolist()
+
+    # 7) Obter serviço do Sheets
     _, sheets_service = get_services()
 
-    # 4) Limpar planilha
+    # 8) Limpar planilha
     sheets_service.spreadsheets().values().clear(
         spreadsheetId=sheet_id, range="A:ZZ"
     ).execute()
 
-    # 5) Escrever dados
+    # 9) Escrever dados
     body = {"values": values}
     sheets_service.spreadsheets().values().update(
         spreadsheetId=sheet_id,
