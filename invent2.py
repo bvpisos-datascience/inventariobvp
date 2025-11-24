@@ -1,7 +1,7 @@
 import os
 import re
 import datetime as dt
-from pathlib import Path  # ← Import correto
+from pathlib import Path
 
 import pandas as pd
 from loguru import logger
@@ -20,7 +20,7 @@ if IS_STREAMLIT_CLOUD:
 
     # 2) Garante que a pasta credentials existe
     os.makedirs("credentials", exist_ok=True)
-    creds_path = Path("credentials/indicadores-inventario-bv.json")  # ← Use Path
+    creds_path = Path("credentials/indicadores-inventario-bv.json")
     creds_path.write_text(creds_json, encoding="utf-8")
 
     # 3) Ajusta a variável de ambiente para o caminho do arquivo
@@ -44,13 +44,10 @@ else:
 load_dotenv(override=True)
 
 PASTA_ID = os.getenv("DRIVE_FOLDER_INPUT")
-HIST_SOURCE = os.getenv("HIST_SOURCE")   # CSV histórico local
-DESTINO = os.getenv("DESTINO")           # 'sheets' ou outro
+HIST_SOURCE = os.getenv("HIST_SOURCE")
+DESTINO = os.getenv("DESTINO")
 
 
-# ---------------------------------------------------------------------
-# NORMALIZAÇÃO DE COLUNAS
-# ---------------------------------------------------------------------
 def normalize_cols(df: pd.DataFrame) -> pd.DataFrame:
     """
     Normaliza nomes de colunas:
@@ -81,9 +78,6 @@ def normalize_cols(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-# ---------------------------------------------------------------------
-# PARSE DA DATA E LOJA A PARTIR DO NOME DO ARQUIVO
-# ---------------------------------------------------------------------
 def parse_date_store(filename: str):
     """
     Extrai data a partir do nome do arquivo no formato:
@@ -97,7 +91,7 @@ def parse_date_store(filename: str):
     m = re.search(r"(\d{2})(\d{2})(\d{2})", filename)
     if m:
         dia, mes, ano2 = map(int, m.groups())
-        ano = 2000 + ano2  # assume século 21
+        ano = 2000 + ano2
         try:
             d = dt.date(ano, mes, dia)
         except ValueError:
@@ -113,9 +107,6 @@ def parse_date_store(filename: str):
     return d, loja
 
 
-# ---------------------------------------------------------------------
-# TRANSFORMAÇÃO DO DATAFRAME BRUTO EM FORMATO PADRÃO
-# ---------------------------------------------------------------------
 def transform(df: pd.DataFrame, dt_inv, loja: str) -> pd.DataFrame:
     """
     - Normaliza nomes de colunas
@@ -126,7 +117,6 @@ def transform(df: pd.DataFrame, dt_inv, loja: str) -> pd.DataFrame:
     """
     df = normalize_cols(df)
 
-    # Valida colunas obrigatórias
     required = ["qtd_erp", "qtd_wms"]
     missing = [c for c in required if c not in df.columns]
     if missing:
@@ -138,30 +128,24 @@ def transform(df: pd.DataFrame, dt_inv, loja: str) -> pd.DataFrame:
 
     df["dt_inventario"] = pd.to_datetime(dt_inv)
 
-    # Numéricos
     df["qtd_erp"] = pd.to_numeric(df["qtd_erp"], errors="coerce").fillna(0)
     df["qtd_wms"] = pd.to_numeric(df["qtd_wms"], errors="coerce").fillna(0)
 
-    # Diferença calculada
     df["qtd_dif_calc"] = df["qtd_wms"] - df["qtd_erp"]
 
-    # Se houver qtd_dif original, marcamos inconsistência
     if "qtd_dif" in df.columns:
         df["qtd_dif"] = pd.to_numeric(df["qtd_dif"], errors="coerce")
         df["flag_inconsistencia"] = (
             df["qtd_dif"].round(2) != df["qtd_dif_calc"].round(2)
         )
 
-    # Em qualquer caso, passamos a usar a calculada
     df["qtd_dif"] = df["qtd_dif_calc"]
 
-    # Valor dif opcional
     if "valor_dif" in df.columns:
         df["valor_dif"] = pd.to_numeric(df["valor_dif"], errors="coerce")
     else:
         df["valor_dif"] = pd.NA
 
-    # Garantir colunas de texto existindo
     if "status" not in df.columns:
         df["status"] = pd.NA
     if "descricao" not in df.columns:
@@ -191,19 +175,18 @@ def transform(df: pd.DataFrame, dt_inv, loja: str) -> pd.DataFrame:
     return df[cols_final]
 
 
-# ---------------------------------------------------------------------
-# PIPELINE
-# ---------------------------------------------------------------------
 def run_pipeline():
     """Roda o pipeline de inventário e devolve um resumo para o Streamlit."""
     print(f"[DEBUG] PASTA_ID: {PASTA_ID}")
     print(f"[DEBUG] DESTINO: {DESTINO}")
     print(f"[DEBUG] HIST_SOURCE: {HIST_SOURCE}")
+    
     if not PASTA_ID:
         raise RuntimeError("DRIVE_FOLDER_INPUT não definido no .env")
 
     logger.info("Início da ingestão")
 
+    # PASSO 1: Processar todos os arquivos da pasta Drive
     frames = []
     files = list_gsheets_in_folder(PASTA_ID)
     logger.info(f"Arquivos encontrados na pasta de entrada: {len(files)}")
@@ -215,7 +198,14 @@ def run_pipeline():
         try:
             dt_inv, loja = parse_date_store(nome)
             df_raw = read_gsheet_to_df(file_id)
+            
+            # DEBUG: Mostrar quantas linhas cada arquivo tem
+            logger.info(f"Arquivo {nome}: {len(df_raw)} linhas brutas")
+            
             df_tr = transform(df_raw, dt_inv, loja)
+            
+            logger.info(f"Arquivo {nome}: {len(df_tr)} linhas após transformação")
+            
             frames.append(df_tr)
             logger.info(f"Arquivo processado: {nome} ({file_id})")
         except Exception as e:
@@ -232,10 +222,11 @@ def run_pipeline():
             "df_final": pd.DataFrame(),
         }
 
-    # Junta tudo que veio dos arquivos da pasta
-    df = pd.concat(frames, ignore_index=True)
+    # PASSO 2: Juntar APENAS os arquivos novos processados
+    df_novos = pd.concat(frames, ignore_index=True)
+    logger.info(f"Total de linhas dos arquivos novos: {len(df_novos)}")
 
-    # Histórico local — só se existir e for válido
+    # PASSO 3: Ler histórico SOMENTE para manter dados antigos (fora da janela de 12 meses dos novos)
     hist = pd.DataFrame()
     if HIST_SOURCE:
         hist_path = Path(HIST_SOURCE)
@@ -246,36 +237,50 @@ def run_pipeline():
                     parse_dates=["dt_inventario", "ingestion_ts"],
                 )
                 logger.info(f"Lido histórico local: {len(hist)} linhas")
+                
+                # CRÍTICO: Remover do histórico as datas que estão nos arquivos novos
+                # para evitar duplicação
+                datas_novas = df_novos["dt_inventario"].unique()
+                hist = hist[~hist["dt_inventario"].isin(datas_novas)]
+                logger.info(f"Histórico após remover datas duplicadas: {len(hist)} linhas")
+                
             except Exception as e:
                 logger.warning(f"Falha ao ler histórico local: {e}. Ignorando.")
         else:
             logger.info("Arquivo histórico não encontrado. Iniciando com base vazia.")
 
-    df_all = pd.concat([hist, df], ignore_index=True)
+    # PASSO 4: Concatenar histórico limpo + dados novos
+    df_all = pd.concat([hist, df_novos], ignore_index=True)
+    logger.info(f"Total após concatenação: {len(df_all)} linhas")
 
-    # Deduplicação pela chave
+    # PASSO 5: Deduplicação pela chave (por segurança)
     subset = ["dt_inventario", "loja", "item_id"]
     if "id" in df_all.columns:
-        subset.insert(1, "id")  # dt_inventario, id, loja, item_id
+        subset.insert(1, "id")
 
+    linhas_antes_dedup = len(df_all)
     df_all = (
         df_all.sort_values("ingestion_ts")
               .drop_duplicates(subset=subset, keep="last")
     )
+    logger.info(f"Deduplicação removeu {linhas_antes_dedup - len(df_all)} linhas")
 
-    # Janela móvel de 12 meses (timezone-naive)
+    # PASSO 6: Aplicar janela móvel de 12 meses
     df_all["dt_inventario"] = pd.to_datetime(df_all["dt_inventario"]).dt.tz_localize(None)
     cutoff = pd.Timestamp.now().normalize() - pd.DateOffset(months=12)
+    
+    linhas_antes_janela = len(df_all)
     df_all = df_all[df_all["dt_inventario"] >= cutoff]
+    logger.info(f"Janela de 12 meses removeu {linhas_antes_janela - len(df_all)} linhas")
 
-    # Métricas
+    # PASSO 7: Calcular métricas
     df_all["dif_abs"] = df_all["qtd_dif"].abs()
     df_all["acuracia"] = 1 - (
         df_all["dif_abs"] / df_all["qtd_wms"].replace({0: pd.NA})
     )
     df_all["acuracia"] = df_all["acuracia"].clip(lower=0, upper=1)
 
-    # Escreve no destino (Google Sheets + CSV histórico)
+    # PASSO 8: Escrever resultado
     write_output(df_all, DESTINO or "sheets")
 
     resumo = {

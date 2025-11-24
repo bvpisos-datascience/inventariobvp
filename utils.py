@@ -8,18 +8,11 @@ import pandas as pd
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 
-# ----------------------------------------
-# Escopos usados pelas APIs
-# ----------------------------------------
 SCOPES = [
     "https://www.googleapis.com/auth/drive.readonly",
     "https://www.googleapis.com/auth/spreadsheets",
 ]
 
-
-# ========================================
-# 1) MONTAGEM DE CREDENCIAIS (APENAS DO .env — FUNCIONA LOCALMENTE)
-# ========================================
 
 def _build_credentials():
     """
@@ -34,7 +27,6 @@ def _build_credentials():
             "Configure no arquivo .env na raiz do projeto."
         )
 
-    # Remove possíveis aspas extras (caso copie errado)
     raw = raw.strip()
     if raw.startswith('"""') and raw.endswith('"""'):
         raw = raw[3:-3]
@@ -55,7 +47,6 @@ def _build_credentials():
         raise RuntimeError(f"❌ Erro ao criar objeto de credencial: {e}")
 
 
-# Função para obter serviços sob demanda
 def get_services():
     """
     Retorna os serviços do Google Drive e Sheets.
@@ -66,10 +57,6 @@ def get_services():
     sheets_service = build("sheets", "v4", credentials=creds)
     return drive_service, sheets_service
 
-
-# ========================================
-# 2) Funções utilitárias
-# ========================================
 
 def list_gsheets_in_folder(folder_id: str):
     """
@@ -94,18 +81,22 @@ def list_gsheets_in_folder(folder_id: str):
 def read_gsheet_to_df(file_id: str) -> pd.DataFrame:
     """
     Baixa o XLSX do Drive e retorna DataFrame.
+    Usa header=1 para ler a segunda linha como cabeçalho (linha de índice 1).
     """
     drive_service, _ = get_services()
     data = drive_service.files().get_media(fileId=file_id).execute()
     bio = io.BytesIO(data)
     
-    # Força leitura da linha 2 como cabeçalho, ignora linhas vazias
-    df = pd.read_excel(bio, header=1, skiprows=0, dtype=str)
+    # CORRIGIDO: header=1 já pula a primeira linha automaticamente
+    # Não precisa de skiprows=0 (que é o padrão)
+    df = pd.read_excel(bio, header=1, dtype=str)
     
     # Remove linhas completamente vazias
     df = df.dropna(how='all')
     
     print(f"[DEBUG] Colunas lidas: {list(df.columns)}")
+    print(f"[DEBUG] Linhas após leitura e limpeza: {len(df)}")
+    
     return df
 
 
