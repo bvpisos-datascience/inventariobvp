@@ -56,10 +56,13 @@ def normalize_cols(df: pd.DataFrame) -> pd.DataFrame:
     - remove acentos
     - troca qualquer coisa que não seja [a-z0-9] por "_"
     - remove "_" do começo/fim
-    - renomeia "item" -> "item_id"
+    - renomeia variações comuns
     """
     df = df.copy()
 
+    # Salva os nomes originais para debug
+    original_cols = list(df.columns)
+    
     df.columns = (
         df.columns
           .str.strip()
@@ -70,10 +73,19 @@ def normalize_cols(df: pd.DataFrame) -> pd.DataFrame:
           .str.strip('_')
     )
 
+    # Mapeamentos conhecidos
     rename_map = {
         "item": "item_id",
+        "qtd_erp": "qtd_erp",
+        "qtd_wms": "qtd_wms",
+        "qtd_dif": "qtd_dif",
+        "valor_dif": "valor_dif",
     }
     df = df.rename(columns=rename_map)
+    
+    logger.info(f"Normalização de colunas:")
+    for orig, norm in zip(original_cols, df.columns):
+        logger.info(f"  {orig} -> {norm}")
 
     return df
 
@@ -112,12 +124,17 @@ def transform(df: pd.DataFrame, dt_inv, loja: str) -> pd.DataFrame:
     - Normaliza nomes de colunas
     - Garante presença de 'qtd_erp' e 'qtd_wms'
     - Converte colunas numéricas
-    - Recalcula qtd_dif
+    - USA qtd_dif ORIGINAL (não recalcula)
     - Adiciona dt_inventario, loja, ingestion_ts
     """
+    logger.info(f"Transform iniciado para {dt_inv}, loja={loja}")
+    logger.info(f"Colunas recebidas: {list(df.columns)}")
+    logger.info(f"Primeiras 3 linhas antes da normalização:\n{df.head(3)}")
+    
     df = normalize_cols(df)
 
-    required = ["qtd_erp", "qtd_wms"]
+    # Valida colunas obrigatórias
+    required = ["qtd_erp", "qtd_wms", "qtd_dif"]
     missing = [c for c in required if c not in df.columns]
     if missing:
         raise ValueError(
@@ -128,24 +145,46 @@ def transform(df: pd.DataFrame, dt_inv, loja: str) -> pd.DataFrame:
 
     df["dt_inventario"] = pd.to_datetime(dt_inv)
 
-    df["qtd_erp"] = pd.to_numeric(df["qtd_erp"], errors="coerce").fillna(0)
-    df["qtd_wms"] = pd.to_numeric(df["qtd_wms"], errors="coerce").fillna(0)
+    # CRITICAL: Substituir vírgula por ponto ANTES de converter para numérico
+    # Arquivos brasileiros usam vírgula como separador decimal
+    for col in ["qtd_erp", "qtd_wms", "qtd_dif"]:
+        if col in df.columns:
+            df[col] = df[col].astype(str).str.replace(',', '.', regex=False)
+    
+    # Converte colunas numéricas (SEM fillna para preservar dados originais)
+    df["qtd_erp"] = pd.to_numeric(df["qtd_erp"], errors="coerce")
+    df["qtd_wms"] = pd.to_numeric(df["qtd_wms"], errors="coerce")
+    df["qtd_dif"] = pd.to_numeric(df["qtd_dif"], errors="coerce")
+    
+    # IMPORTANTE: Agora vamos PREENCHER zeros apenas onde realmente for necessário
+    # Se qtd_erp for NaN mas temos qtd_wms e qtd_dif válidos, recalculamos
+    mask_recalc_erp = df["qtd_erp"].isna() & df["qtd_wms"].notna() & df["qtd_dif"].notna()
+    df.loc[mask_recalc_erp, "qtd_erp"] = df.loc[mask_recalc_erp, "qtd_wms"] - df.loc[mask_recalc_erp, "qtd_dif"]
+    
+    # Se ainda houver NaN em qtd_erp, preenche com 0
+    df["qtd_erp"] = df["qtd_erp"].fillna(0)
+    
+    # Para qtd_wms: se for NaN mas temos erp e dif, recalcula
+    mask_recalc_wms = df["qtd_wms"].isna() & df["qtd_erp"].notna() & df["qtd_dif"].notna()
+    df.loc[mask_recalc_wms, "qtd_wms"] = df.loc[mask_recalc_wms, "qtd_erp"] + df.loc[mask_recalc_wms, "qtd_dif"]
+    
+    # Se ainda houver NaN em qtd_wms, preenche com 0
+    df["qtd_wms"] = df["qtd_wms"].fillna(0)
+    
+    # Para qtd_dif: PRESERVA os valores originais, só recalcula se for NaN
+    mask_recalc_dif = df["qtd_dif"].isna()
+    df.loc[mask_recalc_dif, "qtd_dif"] = df.loc[mask_recalc_dif, "qtd_wms"] - df.loc[mask_recalc_dif, "qtd_erp"]
+    
+    logger.info(f"Após conversão numérica - amostra qtd_dif:\n{df[['qtd_erp', 'qtd_wms', 'qtd_dif']].head(10)}")
 
-    df["qtd_dif_calc"] = df["qtd_wms"] - df["qtd_erp"]
-
-    if "qtd_dif" in df.columns:
-        df["qtd_dif"] = pd.to_numeric(df["qtd_dif"], errors="coerce")
-        df["flag_inconsistencia"] = (
-            df["qtd_dif"].round(2) != df["qtd_dif_calc"].round(2)
-        )
-
-    df["qtd_dif"] = df["qtd_dif_calc"]
-
+    # Valor dif opcional - TAMBÉM precisa converter vírgula
     if "valor_dif" in df.columns:
+        df["valor_dif"] = df["valor_dif"].astype(str).str.replace(',', '.', regex=False)
         df["valor_dif"] = pd.to_numeric(df["valor_dif"], errors="coerce")
     else:
         df["valor_dif"] = pd.NA
 
+    # Garantir colunas de texto existindo
     if "status" not in df.columns:
         df["status"] = pd.NA
     if "descricao" not in df.columns:
@@ -172,6 +211,7 @@ def transform(df: pd.DataFrame, dt_inv, loja: str) -> pd.DataFrame:
     ]
     cols_final = [c for c in cols_final if c is not None]
 
+    logger.info(f"Transform concluído: {len(df)} linhas")
     return df[cols_final]
 
 
@@ -199,7 +239,6 @@ def run_pipeline():
             dt_inv, loja = parse_date_store(nome)
             df_raw = read_gsheet_to_df(file_id)
             
-            # DEBUG: Mostrar quantas linhas cada arquivo tem
             logger.info(f"Arquivo {nome}: {len(df_raw)} linhas brutas")
             
             df_tr = transform(df_raw, dt_inv, loja)
@@ -210,6 +249,8 @@ def run_pipeline():
             logger.info(f"Arquivo processado: {nome} ({file_id})")
         except Exception as e:
             logger.error(f"Falha ao processar arquivo {nome} ({file_id}): {e}")
+            import traceback
+            logger.error(traceback.format_exc())
 
     if not frames:
         logger.warning("Nenhum arquivo válido foi processado.")
@@ -226,7 +267,7 @@ def run_pipeline():
     df_novos = pd.concat(frames, ignore_index=True)
     logger.info(f"Total de linhas dos arquivos novos: {len(df_novos)}")
 
-    # PASSO 3: Ler histórico SOMENTE para manter dados antigos (fora da janela de 12 meses dos novos)
+    # PASSO 3: Ler histórico SOMENTE para manter dados antigos
     hist = pd.DataFrame()
     if HIST_SOURCE:
         hist_path = Path(HIST_SOURCE)
@@ -239,7 +280,6 @@ def run_pipeline():
                 logger.info(f"Lido histórico local: {len(hist)} linhas")
                 
                 # CRÍTICO: Remover do histórico as datas que estão nos arquivos novos
-                # para evitar duplicação
                 datas_novas = df_novos["dt_inventario"].unique()
                 hist = hist[~hist["dt_inventario"].isin(datas_novas)]
                 logger.info(f"Histórico após remover datas duplicadas: {len(hist)} linhas")

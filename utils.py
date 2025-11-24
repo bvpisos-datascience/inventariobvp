@@ -81,21 +81,63 @@ def list_gsheets_in_folder(folder_id: str):
 def read_gsheet_to_df(file_id: str) -> pd.DataFrame:
     """
     Baixa o XLSX do Drive e retorna DataFrame.
-    Usa header=1 para ler a segunda linha como cabeçalho (linha de índice 1).
+    Testa diferentes configurações de leitura para encontrar a correta.
     """
     drive_service, _ = get_services()
     data = drive_service.files().get_media(fileId=file_id).execute()
     bio = io.BytesIO(data)
     
-    # CORRIGIDO: header=1 já pula a primeira linha automaticamente
-    # Não precisa de skiprows=0 (que é o padrão)
-    df = pd.read_excel(bio, header=1, dtype=str)
+    # TESTE 1: Ler tudo sem header para ver a estrutura
+    print(f"\n{'='*60}")
+    print(f"[DEBUG] Analisando arquivo {file_id}")
+    print(f"{'='*60}")
     
-    # Remove linhas completamente vazias
+    bio.seek(0)  # Volta ao início
+    df_raw = pd.read_excel(bio, header=None)
+    print(f"[DEBUG] TESTE 1 - Leitura RAW (sem header):")
+    print(f"  Total de linhas: {len(df_raw)}")
+    print(f"  Primeiras 5 linhas completas:")
+    print(df_raw.head(5))
+    print(f"\n  Linha 0: {list(df_raw.iloc[0])}")
+    print(f"  Linha 1: {list(df_raw.iloc[1])}")
+    if len(df_raw) > 2:
+        print(f"  Linha 2: {list(df_raw.iloc[2])}")
+    
+    # TESTE 2: Ler com header=1
+    bio.seek(0)
+    df_h1 = pd.read_excel(bio, header=1)
+    print(f"\n[DEBUG] TESTE 2 - Leitura com header=1:")
+    print(f"  Colunas: {list(df_h1.columns)}")
+    print(f"  Total de linhas: {len(df_h1)}")
+    print(f"  Primeiras 5 linhas:")
+    print(df_h1.head(5))
+    
+    # TESTE 3: Quantas linhas têm valores nas colunas principais?
+    if 'Qtd. WMS' in df_h1.columns or 'B' in df_raw.columns:
+        col_wms = 'Qtd. WMS' if 'Qtd. WMS' in df_h1.columns else 1  # Coluna B = índice 1
+        
+        if isinstance(col_wms, str):
+            linhas_com_dados = df_h1[col_wms].notna().sum()
+            print(f"\n[DEBUG] TESTE 3 - Coluna '{col_wms}' tem {linhas_com_dados} valores não-nulos")
+            print(f"  Valores únicos (primeiros 20): {df_h1[col_wms].dropna().unique()[:20]}")
+        else:
+            linhas_com_dados = df_raw[col_wms].notna().sum()
+            print(f"\n[DEBUG] TESTE 3 - Coluna índice {col_wms} tem {linhas_com_dados} valores não-nulos")
+    
+    # Escolher a melhor leitura
+    df = df_h1.copy()
+    
+    # Remove APENAS linhas onde TODAS as colunas são NaN
+    linhas_antes = len(df)
     df = df.dropna(how='all')
+    linhas_depois = len(df)
     
-    print(f"[DEBUG] Colunas lidas: {list(df.columns)}")
-    print(f"[DEBUG] Linhas após leitura e limpeza: {len(df)}")
+    print(f"\n[DEBUG] RESULTADO FINAL:")
+    print(f"  Linhas antes do dropna: {linhas_antes}")
+    print(f"  Linhas removidas: {linhas_antes - linhas_depois}")
+    print(f"  Linhas finais: {linhas_depois}")
+    print(f"  Colunas: {list(df.columns)}")
+    print(f"{'='*60}\n")
     
     return df
 
