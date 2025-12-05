@@ -21,3 +21,10 @@ __pycache__/
 # ipybnotebook
 .ipynb_checkpoints/
 .ipynb
+
+# IDEs
+.idea/
+
+# Dados
+data/raw*/
+data/processed*/
