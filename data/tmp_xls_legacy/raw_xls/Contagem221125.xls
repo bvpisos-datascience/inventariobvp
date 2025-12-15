@@ -1,0 +1,185 @@
+﻿<?xml version='1.0'?>
+<?mso-application progid='Excel.Sheet'?>
+<s:Workbook xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:s="urn:schemas-microsoft-com:office:spreadsheet">
+  <o:DocumentProperties>
+    <o:Author>MAYAN KALLIU MIRANDA PINHEIRO</o:Author>
+    <o:Created>2025-11-28T11:43:37</o:Created>
+    <o:Company>FULLWMS</o:Company>
+  </o:DocumentProperties>
+  <s:Styles>
+    <s:Style s:ID="TitleStyle">
+      <s:Alignment s:Horizontal="Center" s:Vertical="Center" />
+      <s:Font s:Bold="1" s:Size="14" />
+    </s:Style>
+    <s:Style s:ID="HeaderStyle">
+      <s:Alignment s:Horizontal="Center" />
+      <s:Font s:Bold="1" />
+    </s:Style>
+    <s:Style s:ID="CellCenterStyle">
+      <s:Alignment s:Horizontal="Center" />
+    </s:Style>
+    <s:Style s:ID="CellRightStyle">
+      <s:Alignment s:Horizontal="Right" />
+    </s:Style>
+  </s:Styles>
+  <s:Worksheet s:Name="Resultado">
+    <s:Table>
+      <s:Column s:Width="40" />
+      <s:Column s:Width="60" />
+      <s:Column s:Width="60" />
+      <s:Column s:Width="40" />
+      <s:Column s:Width="50" />
+      <s:Column s:Width="50" />
+      <s:Column s:Width="50" />
+      <s:Column s:Width="70" />
+      <s:Column s:Width="70" />
+      <s:Column s:Width="150" />
+      <s:Column s:Width="60" />
+      <s:Row s:Height="30">
+        <s:Cell s:MergeAcross="10" s:StyleID="TitleStyle">
+          <s:Data s:Type="String">WF0141 - Produtos/Locais inventariados</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Almox</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Endereço</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Item</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Descrição</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Qtd. WMS</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Qtd. Físico</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Qtd. Dif.</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Lote</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Situação</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Colaborador</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Data contagem</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">CROSS-29-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">49095</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PORCE 120X120 CARRARA AC DECORTILES(1,44) </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       48.960</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       50.400</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        1.440</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">3003</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">22/11/2025 09:25:07</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">BALCA-2-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">68457</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">TINTA SV *NOVO* TOQ FOS COMPLETO *A2* 16,0 E2-ANDIROBA C373-E2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        1.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        1.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">ANTONIO JOSE (17)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">22/11/2025 14:12:52</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">BALCA-2-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">68459</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">TINTA SV *NOVO* TOQ FOS COMPLETO *B2* 3,2 E2-CADEIRA DE BALANCO D373-E2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        2.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        2.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">ANTONIO JOSE (17)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">22/11/2025 14:13:31</s:Data>
+        </s:Cell>
+      </s:Row>
+    </s:Table>
+  </s:Worksheet>
+</s:Workbook>

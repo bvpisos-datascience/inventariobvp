@@ -1,0 +1,4105 @@
+﻿<?xml version='1.0'?>
+<?mso-application progid='Excel.Sheet'?>
+<s:Workbook xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:s="urn:schemas-microsoft-com:office:spreadsheet">
+  <o:DocumentProperties>
+    <o:Author>MAYAN KALLIU MIRANDA PINHEIRO</o:Author>
+    <o:Created>2025-11-28T11:40:31</o:Created>
+    <o:Company>FULLWMS</o:Company>
+  </o:DocumentProperties>
+  <s:Styles>
+    <s:Style s:ID="TitleStyle">
+      <s:Alignment s:Horizontal="Center" s:Vertical="Center" />
+      <s:Font s:Bold="1" s:Size="14" />
+    </s:Style>
+    <s:Style s:ID="HeaderStyle">
+      <s:Alignment s:Horizontal="Center" />
+      <s:Font s:Bold="1" />
+    </s:Style>
+    <s:Style s:ID="CellCenterStyle">
+      <s:Alignment s:Horizontal="Center" />
+    </s:Style>
+    <s:Style s:ID="CellRightStyle">
+      <s:Alignment s:Horizontal="Right" />
+    </s:Style>
+  </s:Styles>
+  <s:Worksheet s:Name="Resultado">
+    <s:Table>
+      <s:Column s:Width="40" />
+      <s:Column s:Width="60" />
+      <s:Column s:Width="60" />
+      <s:Column s:Width="40" />
+      <s:Column s:Width="50" />
+      <s:Column s:Width="50" />
+      <s:Column s:Width="50" />
+      <s:Column s:Width="70" />
+      <s:Column s:Width="70" />
+      <s:Column s:Width="150" />
+      <s:Column s:Width="60" />
+      <s:Row s:Height="30">
+        <s:Cell s:MergeAcross="10" s:StyleID="TitleStyle">
+          <s:Data s:Type="String">WF0141 - Produtos/Locais inventariados</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Almox</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Endereço</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Item</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Descrição</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Qtd. WMS</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Qtd. Físico</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Qtd. Dif.</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Lote</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Situação</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Colaborador</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="HeaderStyle">
+          <s:Data s:Type="String">Data contagem</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">ARG-2-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">54</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">ARGAMASSA WEBER AC3 CINZA 20KG </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       10.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       11.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        1.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 08:27:31</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A09-10-2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">66604</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">BASE SV5 *NOVO* FOSCO COMPLETO 16L B2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       14.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       16.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        2.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PEDRO RAFAEL (25)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 16:32:43</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A09-14-3</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">11867</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">BASE SV5 CLASSICA / TOQUE FOSCO 16L A2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       19.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       20.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        1.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A250841808</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 15:58:17</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-4-4</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">42918</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">BASE SV5 ESM COR&amp;PROT+PRATICO BR (BA) 3,20L A2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        9.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        9.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B250417018</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-6-2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">42920</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">BASE SV5 ESM COR&amp;PROT+PRATICO BR (BA) 3,20L B2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        1.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        1.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A250417013</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-2-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">61822</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">BASE SV5 FACHADA PROT EMBORRACHADA B2 16L</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">G250842058</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-18-3</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12803</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">BASE SV5 TOQUE DE SEDA 0,80L B2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        8.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        8.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">L240839745</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-16-3</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12805</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">BASE SV5 TOQUE DE SEDA 0,80L C2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        1.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        1.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A230416302</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-4-2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">41927</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">EFEITO TOQUE DA TERRA BARRO DO CERRADO SUVINIL 5KG </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        4.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        4.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">F250813303</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-4-3</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">41927</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">EFEITO TOQUE DA TERRA BARRO DO CERRADO SUVINIL 5KG </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       12.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       12.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">F250813303</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-18-4</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">37302</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">ESPELHO CAMELIA 2 D70CM EPF/C2 ASTRA </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        5.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       15.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       10.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B07-1-3</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">37302</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">ESPELHO CAMELIA 2 D70CM EPF/C2 ASTRA </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        3.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        3.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B08-1-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">37302</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">ESPELHO CAMELIA 2 D70CM EPF/C2 ASTRA </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        2.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        2.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-2-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">66465</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">FUNDO PREPARADOR DE PAREDES 18L SUVINIL 50823851(BP) </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        8.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       -8.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-4-2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">10729</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">MANTA LIQUIDA PRETA 3,6KG WEBER </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        2.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       -2.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">7775258</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-4-4</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">42715</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">MASSA ACRILICA SUVINIL 5,5KG (BP) </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       12.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       12.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">C250727591</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">VOLTA-1-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">6112</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PISO 45X45 ASTRA BG FORMIGRES (2,00)PEI.4-1F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        2.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        2.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">085</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">ALEXANDER (80)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 13:56:35</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A05-11-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">1906</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PISO 45X45 CALU FORMIGRES (2,00)PEI.3-1F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      128.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      128.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">097</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A06-53-3</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">1906</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PISO 45X45 CALU FORMIGRES (2,00)PEI.3-1F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       68.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       68.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">096</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A05-21-2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">21636</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PISO 45X45 SAN LORENZO BG FORMIGRES (2,00)PEI.4-1F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      126.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      126.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">040</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A06-21-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">21636</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PISO 45X45 SAN LORENZO BG FORMIGRES (2,00)PEI.4-1F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      128.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      128.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">040</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A06-33-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">21636</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PISO 45X45 SAN LORENZO BG FORMIGRES (2,00)PEI.4-1F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      128.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      128.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">040</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A06-40-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">21636</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PISO 45X45 SAN LORENZO BG FORMIGRES (2,00)PEI.4-1F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      128.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      128.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">040</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A08-32-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">39028</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PISO 54X54 OLIMPO AD ARIELLE (2,62)LE-V3-4F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      461.120</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      461.120</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">05064-25</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A04-1-2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">42110</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PISO 60X120 BRANCO PO FORMIGRES (2,16)LB-V1-1F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      708.480</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      708.480</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">070</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:10</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A05-2-2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">42627</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PISO 67X67 RET IRIS LUX ARIELLE (2,71) LC-V4-F6 </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">     1138.200</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">     1138.200</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">05111-25</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">VOLTA-1-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">51407</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PISO 81X81 ATENAS CZ PO FORMIGRES (1,97) </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        1.970</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        1.970</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">010</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">ALEXANDER (80)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 13:42:32</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">VOLTA-1-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">50664</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PISO 86X86 PHD86090R URANO AC INOUT (2,21)LC-V4-6F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        2.210</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        2.210</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">0022512</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">ALEXANDER (80)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 13:44:59</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">VOLTA-1-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">59561</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PISO 88X88 CARBONO BLACK POL FORMIGRES (2,32) </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        2.320</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        2.320</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">003</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">ALEXANDER (80)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 13:39:47</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A11-33-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">37475</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PORCE 120X120 CHLOE LUX PO BIANCOGRES (2,88)LC-V3-14F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      103.680</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      103.680</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">M52</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A11-35-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">37475</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PORCE 120X120 CHLOE LUX PO BIANCOGRES (2,88)LC-V3-14F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      103.680</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      103.680</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">M52</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A10-21-3</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">40950</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PORCE 20X120 CARVALHO NATURAL AC BIANCOGRES (1,70)LD-V4-32F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       64.600</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       64.600</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">F72</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A11-19-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">40950</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PORCE 20X120 CARVALHO NATURAL AC BIANCOGRES (1,70)LD-V4-32F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      108.800</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      108.800</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">F72</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A11-2-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">40950</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PORCE 20X120 CARVALHO NATURAL AC BIANCOGRES (1,70)LD-V4-32F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      107.100</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      107.100</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">F72</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A06-53-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">40916</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PORCE 60X120 CALACATA ALT LUX PO BIANCOGRES (2,20)LC-V3-16F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      330.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      330.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">S72</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A11-25-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">40916</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PORCE 60X120 CALACATA ALT LUX PO BIANCOGRES (2,20)LC-V3-16F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       85.800</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       85.800</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">U62</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A02-2-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">32708</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PORCE 60X120 CARRARA AC DECORTILES(1,44) </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       27.360</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       27.360</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">3015</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:10</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A11-15-2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">32708</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PORCE 60X120 CARRARA AC DECORTILES(1,44) </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       60.480</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       60.480</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">3015</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:10</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A11-9-3</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">32708</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PORCE 60X120 CARRARA AC DECORTILES(1,44) </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       60.480</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       60.480</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">3015</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:10</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">VOLTA-1-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">51838</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PORCE 80X80 HABITAR CINZA CETIM INCESA (2,60) </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        2.600</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        2.600</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">G44</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">ALEXANDER (80)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 13:54:25</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A05-2-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">30733</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PORCE 84X84 BARCELONA PLATA PO DELTA (2,80)LC-V2-9F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      470.400</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      470.400</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">10810082</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">VOLTA-1-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">60492</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PORCE 90X90 BRAVA OSTRA AC DECORTILES (2,43) </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        2.430</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        2.430</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">6501</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">ALEXANDER (80)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 13:55:07</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">VOLTA-1-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">40926</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PORCE 90X90 CALACATA ALT LUX PO BIANCOGRES(2,40)LC-V3-12F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        2.400</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        2.400</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">k05</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">ALEXANDER (80)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 13:41:36</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">VOLTA-1-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">40924</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PORCE 90X90 CALACATA ALT SATIN AC BIANCOGRES (2,40)LD-V3-12F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        2.400</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        2.400</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">Ug5</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">ALEXANDER (80)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 13:40:50</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">VOLTA-1-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">57740</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PORCE 90X90 CAMPUS PORTLAND AC ELIANE (2,43) </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        2.430</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        2.430</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">6505</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">ALEXANDER (80)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 13:44:01</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">PREV1-11-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">61077</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PORCE 90X90 DENON OSTRA AC 3D ELIANE (2,43) </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       77.760</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       77.760</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">9001</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 10:52:49</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">VOLTA-1-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">64687</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PORCE 90X90 METROPOLE PORTLAND AC ELIANE (2,43) </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        2.430</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        2.430</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">6501</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">ALEXANDER (80)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 13:52:53</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-6-2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">41615</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PRIMER BASE 3,6L WEBER </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        3.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        3.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A06-25-4</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">21759</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">REVEST 34X60 ANDARAI CINZA FORMIGRES (2,10)PEI.3-1F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      138.600</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      138.600</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">025</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A02-26-3</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">15246</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">REVEST 34X60 ANDES HD FORMIGRES (2,10) </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       27.300</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       27.300</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">009</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:10</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A06-50-4</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">17613</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">REVEST 34X60 AQUARELA VD FORMIGRES(2,10) LC-V4-4F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      134.400</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      134.400</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">013</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A06-39-3</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">22935</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">REVEST 34X60 ARTESAN BG HD FORMIGRES (2,10) PEI.3-4F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      113.400</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      113.400</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">023</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A06-49-4</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">22935</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">REVEST 34X60 ARTESAN BG HD FORMIGRES (2,10) PEI.3-4F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      151.200</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      151.200</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">023</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A02-32-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">17069</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">REVEST 34X60 AVILA BG HD FORMIGRES (2,10)PEI.3-1F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       27.300</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       27.300</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">099</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:10</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A06-33-2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">17069</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">REVEST 34X60 AVILA BG HD FORMIGRES (2,10)PEI.3-1F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      151.200</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      151.200</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">099</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:10</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A06-38-2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">17069</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">REVEST 34X60 AVILA BG HD FORMIGRES (2,10)PEI.3-1F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      151.200</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      151.200</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">099</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:10</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A06-47-4</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">20619</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">REVEST 34X60 BLASEN BG FORMIGRES (2,10)PEI.3-1F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      142.800</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      142.800</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">043</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A06-53-2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">20619</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">REVEST 34X60 BLASEN BG FORMIGRES (2,10)PEI.3-1F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      151.200</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      151.200</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">043</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A06-52-4</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">14300</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">REVEST 34X60 DANTE MR HD FORMIGRES (2,10)PEI.3-1F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      132.300</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      132.300</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">007</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A05-27-3</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">18983</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">REVEST 34X60 IRIS HD FORMIGRES (2,10)PEI.3-4F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      130.200</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      130.200</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">017</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A06-29-3</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">18983</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">REVEST 34X60 IRIS HD FORMIGRES (2,10)PEI.3-4F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      151.200</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      151.200</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">017</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A06-44-3</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">18983</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">REVEST 34X60 IRIS HD FORMIGRES (2,10)PEI.3-4F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      149.100</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      149.100</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">017</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A06-45-2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">18983</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">REVEST 34X60 IRIS HD FORMIGRES (2,10)PEI.3-4F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      151.200</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      151.200</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">017</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A06-46-3</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">18983</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">REVEST 34X60 IRIS HD FORMIGRES (2,10)PEI.3-4F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      151.200</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      151.200</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">017</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A06-32-2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">17611</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">REVEST 34X60 JARDINS FORMIGRES (2,10)PEI.3-1F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      151.200</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      151.200</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">038</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A10-53-4</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">17611</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">REVEST 34X60 JARDINS FORMIGRES (2,10)PEI.3-1F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">038</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A05-3-3</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">16334</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">REVEST 34X60 MARGARIDA FORMIGRES (2,10) </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      151.200</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      151.200</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">025</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A06-44-2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">16334</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">REVEST 34X60 MARGARIDA FORMIGRES (2,10) </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      149.100</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      149.100</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">025</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A06-45-4</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">16334</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">REVEST 34X60 MARGARIDA FORMIGRES (2,10) </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      151.200</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      151.200</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">025</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A05-25-3</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">20311</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">REVEST 34X60 MARMORE CZ HD FORMIGRES (2,10)PEI.3-4F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      134.400</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      134.400</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">047</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A06-24-2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">22137</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">REVEST 34X60 SPACE AZ FORMIGRES (2,10)PEI.3-4F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      151.200</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      151.200</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">015</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A06-53-4</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">22137</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">REVEST 34X60 SPACE AZ FORMIGRES (2,10)PEI.3-4F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       81.900</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       81.900</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">015</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">VOLTA-1-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">60811</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">REVEST 36X58 RET LIASTRIS ARIELLE (2,56) </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        2.560</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        2.560</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">02300-25</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">ALEXANDER (80)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 13:53:38</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A06-27-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">30841</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">REVEST 37X59 BALI BEIGE ARIELLE (2,43)LA-V2-4F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      102.060</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       92.340</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       -9.720</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">04827-25</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A05-2-2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">23707</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">REVEST 37X59 FLORIDA WHITE ARIELLE (2,43)LA-V2-1F </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      673.110</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      673.110</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">04730-25</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:19:11</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-2-2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">43729</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">SELADOR ACRILICO SUVINIL 3,6L (BP) </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       30.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       30.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">G250812245</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-4-2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">42709</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">TEXTURA CIMENTO QUEIMADO AVENIDA EXPRESSA 18KG SUVINIL </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        5.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        5.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">C250770604</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-4-2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">24013</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">TEXTURA CIMENTO QUEIMADO AVENIDA EXPRESSA 5KG SUVINIL </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       32.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       32.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">F250687602</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-4-2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">24015</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">TEXTURA CIMENTO QUEIMADO DIA DE CHUVA 5KG SUVINIL 50687558 </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       21.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       21.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A09-6-2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">32724</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">TEXTURATTO EFEITO BRILHO CAMURCA 25KG SUVINIL 50744261 </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        6.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        6.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">PEDRO RAFAEL (25)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 10:57:53</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-6-3</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">8253</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">TINTA GLASU ESM BR CINZA ESCURO 3,6L </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        1.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        1.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">E253438666</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-6-3</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">8250</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">TINTA GLASU ESM BR GELO 3,6L </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        2.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       -2.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A253437924</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-2-4</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">8245</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">TINTA GLASU ESM BR PLATINA 3,6L </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        4.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        4.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A253440892</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-2-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">8786</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">TINTA GLASU FO MUDA FACIL BRANCO NEVE 18L (LF) </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">I253426211</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A09-26-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">8547</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">TINTA GLASU SB AREIA 18L 53434267 </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        2.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       -2.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">G253434267</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 16:43:23</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A09-26-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">8547</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">TINTA GLASU SB AREIA 18L 53434267 </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        2.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        2.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B253434267</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 16:43:55</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-6-4</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">42765</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">TINTA GLASU SB BRANCO NEVE 3,6L (BP) </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       36.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       36.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">K240759664</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-2-4</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">42769</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">TINTA GLASU SB GELO 3,6L (BP) /</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       20.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       20.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">G250759665</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-4-4</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">42769</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">TINTA GLASU SB GELO 3,6L (BP) /</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       12.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       12.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">C250759665</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-6-4</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">42769</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">TINTA GLASU SB GELO 3,6L (BP) /</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        9.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        9.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">C250759665</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-2-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">42779</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">TINTA GLASU SB PALHA 18L (LF) </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       15.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       15.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">H253435380</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-2-3</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">65127</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">TINTA SUVINIL ESM COR E PROT BRIL GELO 3,6L 53376974 </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        6.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        6.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-4-3</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">65117</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">TINTA SUVINIL ESM COR E PROT BRIL TABACO 3,6L 53381267 </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        6.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        6.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-4-3</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">50624</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">TINTA SUVINIL PISO CERAMICA 3,6L (BP) </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        3.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        3.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">L240812274</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-4-4</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">50624</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">TINTA SUVINIL PISO CERAMICA 3,6L (BP) </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        4.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        4.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B250812274</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-6-2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">50624</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">TINTA SUVINIL PISO CERAMICA 3,6L (BP) </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       12.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       12.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">G250812274</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-2-4</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">49526</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">TINTA SUVINIL PISO CINZA 3,6L (BP) </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       14.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       14.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">G250812275</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-4-3</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">49526</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">TINTA SUVINIL PISO CINZA 3,6L (BP) </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        9.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        9.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">G250812275</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A09-27-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">8337</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">TINTA SUVINIL PISO CINZA ESCURO 18L 53419268 </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        3.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        3.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">G253419268</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 16:50:27</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">98</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">A09-27-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">8337</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">TINTA SUVINIL PISO CINZA ESCURO 18L 53419268 </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        3.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        3.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">I253419268</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">WILMER (95)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 16:51:47</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-2-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">8337</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">TINTA SUVINIL PISO CINZA ESCURO 18L 53419268 </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">H253419268</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-2-2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">44653</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">TINTA SUVINIL PISO CINZA ESCURO 3,6L </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        9.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        9.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">G250812265</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">MAYAN (37)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-4-4</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">44653</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">TINTA SUVINIL PISO CINZA ESCURO 3,6L </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        4.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        4.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B250812265</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-2-3</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">8332</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">TINTA SUVINIL PISO CONCRETO PURO 3,6L </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       11.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       11.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">E250520027</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-2-3</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">42560</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">TINTA SUVINIL PISO VERMELHO DEMARCACAO 3,6L </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       12.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       12.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">E250812244</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">BALCA-2-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">67539</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">TINTA SV TOQ LUZ *A2* 3,2 E2-CANJICA B277-E2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        2.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        2.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String" />
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">NATHANAEL (21)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 14:03:30</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-4-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">8280</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">VERNIZ MADEIRA PROTEGIDA BR NATURAL 3,6L SUVINIL </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        4.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        4.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">D253391602</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-16-2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">38036</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">VERNIZ PROTECAO BASICA TRANSP 0,9 SUVINIL 50739861</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        6.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        6.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">J230739861</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-18-2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">38036</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">VERNIZ PROTECAO BASICA TRANSP 0,9 SUVINIL 50739861</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       10.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        7.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       -3.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">F240739861</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-2-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">38036</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">VERNIZ PROTECAO BASICA TRANSP 0,9 SUVINIL 50739861</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       12.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       12.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">G250739861</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-2-3</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">38048</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">VERNIZ PROTECAO MAX DECK IMBUIA ACETINADO 3,6 SUVINIL 50739799</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        3.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        3.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">F240739799</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-4-1</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">38048</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">VERNIZ PROTECAO MAX DECK IMBUIA ACETINADO 3,6 SUVINIL 50739799</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        2.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        2.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">L230739799</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-6-2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">38046</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">VERNIZ PROTECAO MAX DECK NATURAL ACETINADO 3,6 SUVINIL 50739838</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       12.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">      -12.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">E250739838</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-6-2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">38046</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">VERNIZ PROTECAO MAX DECK NATURAL ACETINADO 3,6 SUVINIL 50739838</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       12.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">       12.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">E250739838</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Considerado</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 11:51:22</s:Data>
+        </s:Cell>
+      </s:Row>
+      <s:Row>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">12</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B06-16-2</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">8281</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">VERNIZ TINGE E PROTEGE BR IMBUIA 0,9L SUVINIL 57419073 </s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        5.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        5.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellRightStyle">
+          <s:Data s:Type="String">        0.000</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">B247419073</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">Correto</s:Data>
+        </s:Cell>
+        <s:Cell>
+          <s:Data s:Type="String">CARLOS (48)</s:Data>
+        </s:Cell>
+        <s:Cell s:StyleID="CellCenterStyle">
+          <s:Data s:Type="String">28/10/2025 09:27:28</s:Data>
+        </s:Cell>
+      </s:Row>
+    </s:Table>
+  </s:Worksheet>
+</s:Workbook>
