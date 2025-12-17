@@ -1,67 +1,67 @@
-from google.oauth2 import service_account 
-from googleapiclient.discovery import build 
-import gspread 
+from __future__ import annotations
 
-from  .config import GOOGLE_SERVICE_ACCOUNT_FILE 
+from typing import Any
 
-# Escopos de acesso
+import gspread
+from google.oauth2 import service_account
+from googleapiclient.discovery import build
+
+from .config_ingestion import GOOGLE_SERVICE_ACCOUNT_FILE
+
 SCOPES = [
-    'https://www.googleapis.com/auth/drive',
-    'https://www.googleapis.com/auth/spreadsheets'
+    "https://www.googleapis.com/auth/drive",
+    "https://www.googleapis.com/auth/spreadsheets",
 ]
 
+
 def get_credentials():
-    '''
-    Carrega as credenciais da service account a partir do arquivo JSON
-    definido em GOOGLE_SERVICE_ACCOUNT_FILE.
-    '''
-    credentials = service_account.Credentials.from_service_account_file(
+    return service_account.Credentials.from_service_account_file(
         GOOGLE_SERVICE_ACCOUNT_FILE,
-        scopes=SCOPES           
+        scopes=SCOPES,
     )
-    return credentials
 
 
 def get_drive_service():
-    '''
-    Retorna um cliente do Google Drive API autitenicado.
-    '''
-    creds = get_credentials()
-    service = build("drive", "v3", credentials=creds)
-    return service
+    return build("drive", "v3", credentials=get_credentials())
+
 
 def get_gspread_client():
-    '''
-    Retorna um cliente gspread autenticado com service account.
-    '''
-    creds = get_credentials()
-    client = gspread.authorize(creds)
-    return client 
+    return gspread.authorize(get_credentials())
 
 
-from .config import GOOGLE_DRIVE_INPUT_FOLDER_ID 
+def list_files_in_folder(folder_id: str, max_files: int = 450) -> list[dict[str, Any]]:
+    """
+    Lista arquivos dentro de uma pasta do Google Drive (com paginação).
+    Retorna: id, name, mimeType.
+    """
+    if not folder_id or not str(folder_id).strip():
+        raise ValueError("folder_id inválido")
 
-def list_files_in_input_folder(max_files=10):
-    '''
-    Lista alguns arquivos da pasta de entrada no Google Drive
-    para testar se a autenticação está funcionando
-    '''
     service = get_drive_service()
+    query = f"'{folder_id}' in parents and trashed = false"
 
-    query = f"'{GOOGLE_DRIVE_INPUT_FOLDER_ID}' in parents and trashed = false"
+    files: list[dict[str, Any]] = []
+    page_token = None
 
-    results = service.files().list(
-        q=query,
-        pageSize=max_files,
-        fields="files(id, name, mimeType)"
-    ).execute()
+    while True:
+        res = (
+            service.files()
+            .list(
+                q=query,
+                pageSize=min(1000, max_files),
+                fields="nextPageToken, files(id, name, mimeType)",
+                pageToken=page_token,
+            )
+            .execute()
+        )
 
-    files = results.get("files", [])
+        files.extend(res.get("files", []))
+
+        if len(files) >= max_files:
+            return files[:max_files]
+
+        page_token = res.get("nextPageToken")
+        if not page_token:
+            break
 
     return files
-
-if __name__ == "__main__":
-    files = list_files_in_input_folder()
-    print("Arquivos encontrados na pasta de entrada:")
-    for f in files:
-        print(f"- {f['name']} ({f['id']})")

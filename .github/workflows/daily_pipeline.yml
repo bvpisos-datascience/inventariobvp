@@ -1,0 +1,35 @@
+name: Daily pipeline update
+
+on:
+  schedule:
+    - cron: "10 9 * * *"   # todo dia 09:10 UTC
+  workflow_dispatch:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Write service account credentials
+        run: |
+          mkdir -p credentials
+          echo '${{ secrets.GOOGLE_CREDENTIALS_JSON }}' > credentials/sa.json
+
+      - name: Run pipeline (update-only)
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: credentials/sa.json
+          INGESTION_GOOGLE_DRIVE_INPUT_FOLDER_ID: ${{ secrets.INGESTION_GOOGLE_DRIVE_INPUT_FOLDER_ID }}
+          INGESTION_GOOGLE_DRIVE_OUTPUT_FOLDER_ID: ${{ secrets.INGESTION_GOOGLE_DRIVE_OUTPUT_FOLDER_ID }}
+        run: |
+          python -m src.core.pipeline
