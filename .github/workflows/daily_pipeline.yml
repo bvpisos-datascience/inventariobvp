@@ -2,7 +2,7 @@ name: Daily pipeline update
 
 on:
   schedule:
-    - cron: "10 9 * * *"   # todo dia 09:10 UTC
+    - cron: "0 3 * * *"   # todo dia 09:10 UTC
   workflow_dispatch:
 
 jobs:
