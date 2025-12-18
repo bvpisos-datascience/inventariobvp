@@ -27,10 +27,11 @@ jobs:
           pip install -r requirements.txt
 
       - name: Write Google service account credentials
-        # Cria a pasta e o arquivo JSON a partir do segredo
         run: |
           mkdir -p credentials
-          printf '%s' "${{ secrets.GOOGLE_CREDENTIALS_JSON }}" > credentials/sa.json
+          cat << 'EOF' > credentials/sa.json
+          ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
+          EOF
 
       - name: Run inventory pipeline
         env:
