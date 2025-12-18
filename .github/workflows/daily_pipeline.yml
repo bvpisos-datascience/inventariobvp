@@ -1,8 +1,11 @@
-name: Daily pipeline update
+name: Daily inventory pipeline update
 
 on:
   schedule:
-    - cron: "0 3 * * *"   # todo dia 09:10 UTC
+    # GitHub Actions usa UTC.
+    # Brasil (Brasília) é UTC-3.
+    # Para rodar às 00:00 BRT, usamos 03:00 UTC.
+    - cron: "0 3 * * *"
   workflow_dispatch:
 
 jobs:
@@ -10,9 +13,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - name: Setup Python
+        uses: actions/setup-python@v5
         with:
           python-version: "3.11"
 
@@ -21,15 +26,34 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Write service account credentials
+      - name: Write Google service account credentials
+        # Cria a pasta e o arquivo JSON a partir do segredo
         run: |
           mkdir -p credentials
-          echo '${{ secrets.GOOGLE_CREDENTIALS_JSON }}' > credentials/sa.json
+          printf '%s' "${{ secrets.GOOGLE_CREDENTIALS_JSON }}" > credentials/sa.json
 
-      - name: Run pipeline (update-only)
+      - name: Run inventory pipeline
         env:
+          # Define o diretório atual como raiz para importação de módulos
+          PYTHONPATH: .
+          # Aponta para o arquivo criado no passo anterior
           GOOGLE_APPLICATION_CREDENTIALS: credentials/sa.json
+          
+          # Variáveis de ambiente
           INGESTION_GOOGLE_DRIVE_INPUT_FOLDER_ID: ${{ secrets.INGESTION_GOOGLE_DRIVE_INPUT_FOLDER_ID }}
           INGESTION_GOOGLE_DRIVE_OUTPUT_FOLDER_ID: ${{ secrets.INGESTION_GOOGLE_DRIVE_OUTPUT_FOLDER_ID }}
+          INGESTION_GOOGLE_SHEET_ID: ${{ secrets.INGESTION_GOOGLE_SHEET_ID }}
+          INGESTION_GOOGLE_SHEET_TAB: ${{ secrets.INGESTION_GOOGLE_SHEET_TAB }}
+        
         run: |
           python -m src.core.pipeline
+
+      # (OPCIONAL) Salva o CSV gerado como artefato para download no GitHub Actions
+      # Útil para debug se o upload pro Drive/Sheets falhar
+      - name: Upload output artifacts
+        if: always() # Executa mesmo se o pipeline falhar
+        uses: actions/upload-artifact@v4
+        with:
+          name: csv-outputs
+          path: _outputs/
+          retention-days: 5

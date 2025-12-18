@@ -24,6 +24,9 @@ def get_credentials():
 def get_drive_service():
     return build("drive", "v3", credentials=get_credentials())
 
+def get_sheets_service():
+    return build("sheets", "v4", credentials=get_credentials())
+
 
 def get_gspread_client():
     return gspread.authorize(get_credentials())
